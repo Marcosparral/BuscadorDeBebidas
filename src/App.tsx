@@ -1,13 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import IndexPage from "./pages/IndexPage"
+import FavoritePage from "./pages/FavoritePage"
 
-
-function App() {
-  
-
+export default function AppRouter() {
   return (
-    <>
-      <div>Buscador de bebidas</div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IndexPage />}/>
+        <Route path="/favoritos" element={<FavoritePage />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
